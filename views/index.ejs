@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>DailyGo backend</title>
+  </head>
+
+  <body>
+    <h1>DailyGo backend server Info</h1>
+    <a
+      href="https://docs.google.com/spreadsheets/d/1z-4ppIOZITXfzUAFVSTZPNqUf1xwiuik4BC5oIk8nXU/edit?usp=sharing"
+      target="_blank"
+      >API Endpoint document</a
+    >
+    <h2>API Endpoint (v1)</h2>
+    <ol>
+      <li>
+        <strong>user</strong> :
+        <a
+          href="https://github.com/Supernova-teambits/edspresso-supernova/blob/develop/server/models/UserRole.js"
+          target="_blank"
+          >Schema</a
+        >
+        <ul>
+          <li>
+            Create a user (POST) :
+            http://13.52.77.145:8080/api/v1/user
+          </li>
+          <li>
+            Get a user info (GET) :
+            http://13.52.77.145:8080/api/v1/user/:id
+          </li>
+          <li>
+            Update a user (PUT) :
+            http://13.52.77.145:8080/api/v1/user/:id
+          </li>
+          <li>
+            Delete a user (DELETE) :
+            http://13.52.77.145:8080/api/v1/user/:id
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>challenge</strong> :
+        <a
+          href="https://github.com/Supernova-teambits/edspresso-supernova/blob/develop/server/models/Manager.js"
+          target="_blank"
+          >Schema</a
+        >
+        <ul>
+          <li>
+            Create a challenge (POST) :
+            http://13.52.77.145:8080/api/v1/challenge
+          </li>
+          <li>
+            Get a challenge info (POST) :
+            http://13.52.77.145:8080/api/v1/challenge/:id
+          </li>
+          <li>
+            Update a challenge (POST) :
+            http://13.52.77.145:8080/api/v1/challenge/:id
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>dailyRecord</strong> :
+        <a
+          href="https://github.com/Supernova-teambits/edspresso-supernova/blob/develop/server/models/Trainee.js"
+          target="_blank"
+          >Schema</a
+        >
+        <ul>
+          <li>
+            Get all daily records (GET) :
+            http://13.52.77.145:8080/api/v1/dailyRecord
+          </li>
+          <li>
+            Get a daily record (GET) :
+            http://13.52.77.145:8080/api/v1/dailyRecord/:id
+          </li>
+          <li>
+            Create a daily record (POST) :
+            http://13.52.77.145:8080/api/v1/dailyRecord
+          </li>
+          <li>
+            Update a daily record (PUT) :
+            http://13.52.77.145:8080/api/v1/dailyRecord/:id
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>badge</strong> :
+        <a
+          href="https://github.com/Supernova-teambits/edspresso-supernova/blob/develop/server/models/Progress.js"
+          target="_blank"
+          >Schema</a
+        >
+        <ul>
+          <li>
+            Create a badge (POST) :
+            http://13.52.77.145:8080/api/v1/badge
+          </li>
+          <li>
+            Get a badge (GET) :
+            http://13.52.77.145:8080/api/v1/badge/:id
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </body>
+</html>
