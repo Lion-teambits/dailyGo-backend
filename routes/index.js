@@ -3,11 +3,12 @@ const router = express.Router({ mergeParams: true});
 
 const userRouter = require("./user");
 const challengeRouter = require("./challenge");
-const dailyRecord = require("./dailyRecord");
+const dailyRecordRouter = require("./dailyRecord");
+const badgeRouter = require("./badge");
 
 router.use(userRouter);
 router.use(challengeRouter);
-router.use(dailyRecord);
-
+router.use(dailyRecordRouter);
+router.use(badgeRouter);
 
 module.exports = router;
