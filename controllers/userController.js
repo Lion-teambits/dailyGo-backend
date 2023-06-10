@@ -2,6 +2,7 @@ const User = require("../models/User");
 
 const createUser = (req, res) => {
     let newUser = new User(req.body);
+
     newUser
         .save()
         .then((results) => {
@@ -13,7 +14,7 @@ const createUser = (req, res) => {
 };
 
 const getUser = (req, res) => {
-    const id = req.param.id;
+    const id = req.params.id;
     
     if (typeof id == "undefined") {
         res.status(404).json("User not found");
