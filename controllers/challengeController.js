@@ -36,7 +36,7 @@ const getChallenge = (req, res) => {
             res.status(500).json(error);
         });
     }
-}
+};
 
 
 const updateChallenge = (req, res) => {
@@ -49,4 +49,4 @@ const updateChallenge = (req, res) => {
         });
 };
 
-module.exports = { createChallenge, getChallenge, updateChallenge }
+module.exports = { createChallenge, getChallenge, updateChallenge };
