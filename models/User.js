@@ -11,6 +11,8 @@ const UserSchema = new Schema({
     badges: { type: Array },
     fireflies: { type: Number },
     collected_fireflies: { type: Array },
+    streak_days: { type: Number },
+    hearts: { type: Number },
     uid: { type: String },
     group_challenge_step: { type: Number },
 });
