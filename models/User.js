@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const UserSchema = new Schema({
     name: { type: String, required: true, minLength:1 },
     photo: { type: String },
-    mode: { type: Number },
+    daily_mode: { type: Number },
     challenge: { type: Array },
     today_record: { type: String },
     past_records: { type: Array },
@@ -15,6 +15,7 @@ const UserSchema = new Schema({
     hearts: { type: Number },
     uid: { type: String },
     group_challenge_step: { type: Number },
+    finish_daily_goal: { type: Boolean },
 });
 
 const User = mongoose.model("User", UserSchema);
