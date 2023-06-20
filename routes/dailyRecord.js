@@ -6,6 +6,7 @@ const dailyRecordCtrl = require("../controllers/dailyRecordController");
 router.post("/dailyRecord", dailyRecordCtrl.createDailyRecord);
 router.get("/dailyRecord", dailyRecordCtrl.getDailyRecord);
 router.get("/dailyRecord/:id", dailyRecordCtrl.getDailyRecord);
+router.get("/dailyRecord/id/:id", dailyRecordCtrl.getDailyRecordById);
 router.put("/dailyRecord/:id", dailyRecordCtrl.updateDailyRecord);
 
 module.exports = router;
