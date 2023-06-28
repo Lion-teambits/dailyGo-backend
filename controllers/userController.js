@@ -14,7 +14,7 @@ const createUser = (req, res) => {
 };
 
 const getUser = (req, res) => {
-    const id = req.params.id;
+    const id = req.params.uid;
     
     if (typeof id == "undefined") {
         res.status(404).json("User not found");
