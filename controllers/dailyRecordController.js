@@ -49,7 +49,7 @@ const getDailyRecordByUid = (req, res) => {
             res.status(500).json(error);
         });
     } else {
-        DailyRecord.findOne({ uid: id }).exec()
+        DailyRecord.find({ uid: id }).exec()
         .then(results => {
             if (results != null) {
                 res.status(200).json(results);
