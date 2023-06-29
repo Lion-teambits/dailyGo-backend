@@ -35,7 +35,8 @@ const getUser = (req, res) => {
 };
 
 const updateUser = (req, res) => {
-    User.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    const id = req.params.uid;
+    User.findOneAndUpdate({ uid: id }, req.body, { new: true })
         .then((results) => {
             res.status(201).json(results);
         })
@@ -45,7 +46,8 @@ const updateUser = (req, res) => {
 };
 
 const deleteUser = (req, res) => {
-    User.findByIdAndDelete(req.params.id)
+    const id = req.params.uid;
+    User.findOneAndDelete({ uid: id })
     .then(results => {
         if (results != null) {
             res.status(200).json("Delete completed");
