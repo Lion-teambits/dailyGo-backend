@@ -14,6 +14,31 @@ const createDailyRecord = (req, res) => {
 };
 
 const getDailyRecord = (req, res) => {
+    const id = req.params.id;
+    if (typeof id == "undefined") {
+        DailyRecord.find({}).exec()
+        .then(results => {
+            res.status(200).json(results);
+        })
+        .catch(error => {
+            res.status(500).json(error);
+        });
+    } else {
+        DailyRecord.findOne({ _id: id }).exec()
+        .then(results => {
+            if (results != null) {
+                res.status(200).json(results);
+            } else {
+                res.status(404).json(results);
+            }
+        })
+        .catch(error => {
+            res.status(500).json(error);
+        });
+    }
+};
+
+const getDailyRecordByDate = (req, res) => {
     const id = req.params.date;
     if (typeof id == "undefined") {
         DailyRecord.find({}).exec()
@@ -73,4 +98,5 @@ const updateDailyRecord = (req, res) => {
         });
 };
 
-module.exports = { createDailyRecord, getDailyRecord, updateDailyRecord, getDailyRecordByUid };
+module.exports = { createDailyRecord, getDailyRecord, updateDailyRecord,
+                getDailyRecordByDate, getDailyRecordByUid };
