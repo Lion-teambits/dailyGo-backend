@@ -10,7 +10,8 @@ const ChallengeProgressSchema = new Schema({
     current_distance: { type: Number },
     finish_challenge: { type: Boolean },
     get_reward: { type: String },
-    event_challenge_id: { type: String },
+    badge_info: { type: String },
+    event_challenge_info: { type: String },
     group_challenge_info: { type: String },
 });
 
