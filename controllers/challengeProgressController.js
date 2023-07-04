@@ -48,4 +48,20 @@ const updateChallengeProgress = (req, res) => {
         });
 };
 
-module.exports = {createChallengeProgress, getChallengeProgress, updateChallengeProgress};
+const deleteChallengeProgress = (req, res) => {
+    const id = req.params.id;
+    ChallengeProgress.findOneAndDelete({ _id: id })
+    .then(results => {
+        if (results != null) {
+            res.status(200).json("Delete completed");
+        } else {
+            res.status(404).json("Delete fail: id not found");
+        }
+    })
+    .catch(error => {
+        res.status(500).json(error);
+    });
+}
+
+module.exports = {createChallengeProgress, getChallengeProgress,
+                updateChallengeProgress, deleteChallengeProgress};
