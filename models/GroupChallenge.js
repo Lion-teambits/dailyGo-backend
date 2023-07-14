@@ -9,6 +9,8 @@ const GroupChallengeSchema = new Schema({
     target_steps: { type: Number },
     badge_info: { type: String },
     group_current_steps: { type: Number },
+    group_current_calories: { type: Number },
+    group_current_distance: { type: Number },
     member_list: { type: Array },
 });
 
