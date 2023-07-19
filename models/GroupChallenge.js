@@ -12,6 +12,7 @@ const GroupChallengeSchema = new Schema({
     group_current_calories: { type: Number },
     group_current_distance: { type: Number },
     member_list: { type: Array },
+    share_id: { type: String },
 });
 
 const GroupChallenge = mongoose.model("GroupChallenge", GroupChallengeSchema);
