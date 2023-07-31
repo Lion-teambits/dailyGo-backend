@@ -17,7 +17,7 @@ app.use(cors()); // allow access from all domain
 // a JSON-like experience with URL-encoded.
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// app.use("/api/v1", authMiddleware.authJWT); // Auth with JWT
+app.use("/api/v1", authMiddleware.authJWT); // Auth with JWT
 app.use("/api/v1", router); // like a prefix of the path
 
 // Summary of API Endpoints
