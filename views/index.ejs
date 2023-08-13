@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>DailyGo backend</title>
+  </head>
+
+  <body>
+    <h1>DailyGo backend server Info</h1>
+    <a
+      href="https://docs.google.com/spreadsheets/d/1z-4ppIOZITXfzUAFVSTZPNqUf1xwiuik4BC5oIk8nXU/edit?usp=sharing"
+      target="_blank"
+      >API Endpoint document</a
+    >
+    <h2>API Endpoint (v1)</h2>
+    <ol>
+      <li>
+        <strong>user</strong> :
+        <a
+          href="https://github.com/Lion-teambits/dailyGo-backend/blob/develop/models/User.js"
+          target="_blank"
+          >Schema</a
+        >
+        <ul>
+          <li>
+            Create a user (POST) :
+            http://13.52.77.145:8080/api/v1/user
+          </li>
+          <li>
+            Get a user info (GET) :
+            http://13.52.77.145:8080/api/v1/user/:uid
+          </li>
+          <li>
+            Update a user (PUT) :
+            http://13.52.77.145:8080/api/v1/user/:uid
+          </li>
+          <li>
+            Delete a user (DELETE) :
+            http://13.52.77.145:8080/api/v1/user/:uid
+          </li>
+        </ul>
+        </br>
+      </li>
+      <li>
+        <strong>dailyRecord</strong> :
+        <a
+          href="https://github.com/Lion-teambits/dailyGo-backend/blob/develop/models/DailyRecord.js"
+          target="_blank"
+          >Schema</a
+        >
+        <ul>
+          <li>
+            Get all daily records (GET) :
+            http://13.52.77.145:8080/api/v1/dailyRecord
+          </li>
+          <li>
+            Get a daily record by ObjectId (GET) :
+            http://13.52.77.145:8080/api/v1/dailyRecord/:id
+          </li>
+          <li>
+            Get a daily record by Date (GET) :
+            http://13.52.77.145:8080/api/v1/dailyRecord/date/:date
+          </li>
+          <li>
+            Get a daily record by Uid (GET) :
+            http://13.52.77.145:8080/api/v1/dailyRecord/uid/:uid
+          </li>
+          <li>
+            Create a daily record (POST) :
+            http://13.52.77.145:8080/api/v1/dailyRecord
+          </li>
+          <li>
+            Update a daily record (PUT) :
+            http://13.52.77.145:8080/api/v1/dailyRecord/:id
+          </li>
+        </ul>
+        </br>
+      </li>
+     <li>
+        <strong>challengeProgress</strong> :
+        <a
+          href="https://github.com/Lion-teambits/dailyGo-backend/blob/develop/models/ChallengeProgress.js"
+          target="_blank"
+          >Schema</a
+        >
+        <ul>
+          <li>
+            Create a challengeProgress (POST) :
+            http://13.52.77.145:8080/api/v1/challengeProgress
+          </li>
+          <li>
+            Get challengeProgress list (GET) :
+            http://13.52.77.145:8080/api/v1/challengeProgress/
+          </li>
+          <li>
+            Get a challengeProgress info (GET) :
+            http://13.52.77.145:8080/api/v1/challengeProgress/:id
+          </li>
+          <li>
+            Update a challengeProgress (PUT) :
+            http://13.52.77.145:8080/api/v1/challengeProgress/:id
+          </li>
+          <li>
+            Delete a challengeProgress (DELETE) :
+            http://13.52.77.145:8080/api/v1/challengeProgress/:id
+          </li>
+        </ul>
+        </br>
+      </li>
+     <li>
+        <strong>groupChallenge</strong> :
+        <a
+          href="https://github.com/Lion-teambits/dailyGo-backend/blob/develop/models/GroupChallenge.js"
+          target="_blank"
+          >Schema</a
+        >
+        <ul>
+          <li>
+            Create a groupChallenge (POST) :
+            http://13.52.77.145:8080/api/v1/groupChallenge
+          </li>
+          <li>
+            Get groupChallenge list (GET) :
+            http://13.52.77.145:8080/api/v1/groupChallenge/
+          </li>
+          <li>
+            Get a groupChallenge info (GET) :
+            http://13.52.77.145:8080/api/v1/groupChallenge/:id
+          </li>
+          <li>
+            Get a groupChallenge info by shared id (GET) :
+            http://13.52.77.145:8080/api/v1/groupChallenge/code/:share_id
+          </li>
+          <li>
+            Update a groupChallenge (PUT) :
+            http://13.52.77.145:8080/api/v1/groupChallenge/:id
+          </li>
+        </ul>
+        </br>
+        <p>====================================== <strong>deprecated</strong> ======================================</p>
+      </li>
+      <li>
+        <strong>challenge</strong> :
+        <a
+          href="https://github.com/Lion-teambits/dailyGo-backend/blob/develop/models/Challenge.js"
+          target="_blank"
+          >Schema</a
+        >
+        <ul>
+          <li>
+            Create a challenge (POST) :
+            http://13.52.77.145:8080/api/v1/challenge
+          </li>
+          <li>
+            Get challenge list (GET) :
+            http://13.52.77.145:8080/api/v1/challenge/
+          </li>
+          <li>
+            Get a challenge info (GET) :
+            http://13.52.77.145:8080/api/v1/challenge/:id
+          </li>
+          <li>
+            Update a challenge (PUT) :
+            http://13.52.77.145:8080/api/v1/challenge/:id
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>badge</strong> :
+        <a
+          href="https://github.com/Lion-teambits/dailyGo-backend/blob/develop/models/Badge.js"
+          target="_blank"
+          >Schema</a
+        >
+        <ul>
+          <li>
+            Create a badge (POST) :
+            http://13.52.77.145:8080/api/v1/badge
+          </li>
+          <li>
+            Get a badge (GET) :
+            http://13.52.77.145:8080/api/v1/badge/:id
+          </li>
+        </ul>
+        <p>======================================================================================</p>
+      </li>
+    </ol>
+  </body>
+</html>
